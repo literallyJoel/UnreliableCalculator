@@ -117,14 +117,14 @@ export default function Home() {
         <div className="flex flex-col gap-2">
           <div className="text-center text-2xl">
             Number of Calculations:{" "}
-            {stats.data && stats.data.correct + stats.data.incorrect}
+            {stats.data.correct + stats.data.incorrect}
           </div>
           <div className="text-center text-3xl">
             Correct & Incorrect Answers
           </div>
           <div className="grid grid-cols-3 gap-4 text-center">
-            <div>Correct: {stats.data && stats.data.correct}</div>
-            <div>Incorrect: {stats.data && stats.data.incorrect}</div>
+            <div>Correct: {stats.data?.correct}</div>
+            <div>Incorrect: {stats.data?.incorrect}</div>
             <div>
               Accuracy:{" "}
               {stats.data &&
@@ -139,14 +139,14 @@ export default function Home() {
           <div className="text-center text-3xl">Error Sizes</div>
           <div className="grid grid-cols-3 gap-4 text-center">
             <div>
-              Largest Error: {stats.data && stats.data.largestOffset?.offset}
+              Largest Error: {stats.data?.largestOffset?.offset}
             </div>
             <div>
-              Smallest Error: {stats.data && stats.data.smallestOffset?.offset}
+              Smallest Error: {stats.data?.smallestOffset?.offset}
             </div>
             <div>
               Average Error:{" "}
-              {stats.data && stats.data.averageOffset._avg.offset}
+              {stats.data?.averageOffset._avg.offset}
             </div>
           </div>
         </div>
