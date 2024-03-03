@@ -1,0 +1,4 @@
+[ZoneTransfer]
+ZoneId=3
+ReferrerUrl=https://cloudconvert.com/
+HostUrl=https://eu-central.storage.cloudconvert.com/tasks/2fd8df2d-5fd8-40dd-bea2-01f5afd468e9/unreliable.ico?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=cloudconvert-production%2F20240303%2Ffra%2Fs3%2Faws4_request&X-Amz-Date=20240303T173315Z&X-Amz-Expires=86400&X-Amz-Signature=c621e49172ae185c79adaf9e02b7a3956fe9bf8ceb3edf11e6affa37c43952ad&X-Amz-SignedHeaders=host&response-content-disposition=attachment%3B%20filename%3D%22unreliable.ico%22&response-content-type=image%2Fvnd.microsoft.icon&x-id=GetObject

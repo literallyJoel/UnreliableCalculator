@@ -1,0 +1,51 @@
+generator client {
+  provider        = "prisma-client-js"
+  previewFeatures = ["driverAdapters"]
+}
+
+datasource db {
+  provider     = "mysql"
+  url          = env("DATABASE_URL")
+  relationMode = "prisma"
+}
+
+model oCV_education {
+  id             String   @id
+  placeName      String
+  startDate      DateTime
+  endDate        DateTime
+  educationLevel String
+  image          String   @default("")
+}
+
+model oCV_experience {
+  id          String   @id
+  placeName   String
+  description String   @db.LongText
+  startDate   DateTime
+  endDate     DateTime
+  jobTitle    String   @default("")
+  image       String   @default("")
+}
+
+model oCV_qualifications {
+  id      String @id
+  name    String
+  grade   String
+  placeID String
+
+  @@index([placeID])
+}
+
+model oCV_skills {
+  id          String @id
+  skillName   String
+  description String @db.LongText
+  image       String @default("")
+}
+
+model unreliableCalculator_stats{
+  id        Int @id @default(autoincrement())
+  correct   Boolean
+  offset    Float
+}
