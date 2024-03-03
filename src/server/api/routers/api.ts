@@ -8,7 +8,7 @@ const calculate = (expression: string): number => {
   console.log(expression);
   const validChars = /[-()\d/*+.]/g;
   if (!validChars.test(expression)) return NaN;
-  const ev = eval(expression);
+  const ev = eval(expression) as number;
   return ev;
 };
 export const apiRouter = createTRPCRouter({
