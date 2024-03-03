@@ -117,7 +117,7 @@ export default function Home() {
         <div className="flex flex-col gap-2">
           <div className="text-center text-2xl">
             Number of Calculations:{" "}
-            {stats.data.correct + stats.data.incorrect}
+            {(stats.data?.correct ??) 0 + (stats.data?.incorrect ?? 0)}
           </div>
           <div className="text-center text-3xl">
             Correct & Incorrect Answers
