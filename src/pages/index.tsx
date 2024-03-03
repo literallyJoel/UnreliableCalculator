@@ -178,9 +178,11 @@ export default function Home() {
           <div>Unreliable Calculator</div>
           {stats.isSuccess && (
             <div className="absolute -right-2 top-20 rotate-12 text-xl">
-              {(stats.data.correct /
-                (stats.data.correct + stats.data.incorrect)) *
-                100}
+              {Math.round(
+                (stats.data.correct /
+                  (stats.data.correct + stats.data.incorrect)) *
+                  100,
+              )}
               % reliable!
             </div>
           )}
